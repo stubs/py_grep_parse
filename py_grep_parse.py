@@ -146,8 +146,7 @@ if call_grep(EXCLUDE_DIRS, INCLUDES, PATTERN, GREP_WHERE, RAW_GREP_FILE):
                             prev_client = client
                             prev_row_len = len(row)
                     else:
-                        #continue
-                        writer.writerow(row)
+                        writer.writerow(row)  # still output possible error row
                 except Exception, e:
                     print "ERROR WORKING WITH ROW NUMBER {}".format(row_num)
     print "\a"  # audible bell for testing
